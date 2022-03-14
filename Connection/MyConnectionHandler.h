@@ -23,11 +23,7 @@ class MyConnectionHandler : public AMQP::ConnectionHandler
         //  send all data at once, so you also need to take care of buffering
         //  the bytes that could not immediately be sent, and try to send
         //  them again when the socket becomes writable again
-        //connection->send();
-        std::string str{"Nairi,Nairi,Nairi"};
-        data = str.data();
-        size = str.size()
-        std::cout<<"OnData"<<std::endl;
+       
     }
       /**
      *  Method that is called by the AMQP library when the login attempt
@@ -41,8 +37,7 @@ class MyConnectionHandler : public AMQP::ConnectionHandler
         //  add your own implementation, for example by creating a channel
         //  instance, and start publishing or consuming
 
-        connection->channels();
-        connection->login();
+
     }
 
     /**
@@ -75,6 +70,7 @@ class MyConnectionHandler : public AMQP::ConnectionHandler
         // @todo
         //  add your own implementation, for example by closing down the
         //  underlying TCP connection too
+        connection->close();
     }
 
 
