@@ -1,0 +1,4 @@
+#temp files and executable
+.a.out
+.vscode
+.DS_Store
