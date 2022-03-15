@@ -7,3 +7,7 @@ Executables/test1.cpp  example of publishing messages
 Executables/test1.cpp  example of consuming messages 
 src/. SimpleAmqpClient headers and definitions
 
+
+
+
+AMQP-CPP Library using Consumer and Publisher examples doesn't finished
