@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -dynamiclib -Wl,-headerpad_max_install_names -o liblibP.dylib -install_name @rpath/liblibP.dylib CMakeFiles/libP.dir/MyPublisher.cpp.o 
