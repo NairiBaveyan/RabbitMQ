@@ -31,7 +31,7 @@
 #include <stdexcept>
 #include <string>
 
-#include "SimpleAmqpClient/Util.h"
+#include "Util.h"
 
 #ifdef _MSC_VER
 #pragma warning(push)
