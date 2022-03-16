@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include <src/SimpleAmqpClient.h>
+#include <src/SimpleAmqpClient/SimpleAmqpClient.h>
 #include <Consumer/myConsumer.hpp>
 
 using namespace AmqpClient;
