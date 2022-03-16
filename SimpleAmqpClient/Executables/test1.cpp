@@ -15,6 +15,10 @@ int main(){
 
     std::shared_ptr<Consumer> consum = Consumer::Create(channel,"exch");
 
+	
+	
+    Channel::OpenOpts opts = Channel::OpenOpts::FromUri("amqp://[guest[:guest]@]");
+    Channel::ptr_t connection = Channel::Open(opts);
 
     while(true)
 	{
