@@ -6,35 +6,24 @@
 using namespace AmqpClient;
 
 int main(){
-    const char *env_p = std::getenv("AMQP_BROKER");
-    Channel::ptr_t channel;
-    if (env_p)
-        channel = Channel::Create(env_p);
-    else
-        channel = Channel::Create("127.0.0.1", 5672);
-
-    std::shared_ptr<Consumer> consum = Consumer::Create(channel,"exch");
-
-	
-	
+    std::string consumer_tag=connection->BasicConsume("N-queue","");
     Channel::OpenOpts opts = Channel::OpenOpts::FromUri("amqp://[guest[:guest]@]");
     Channel::ptr_t connection = Channel::Open(opts);
 
     while(true)
 	{
 		std::string msg;
-		Envelope::ptr_t env;
+	        Envelope::ptr_t env = connection->BasicConsumeMessage(consumer_tag);
+    		connection->BasicAck(env->GetDeliveryInfo());
+    		BasicMessage::ptr_t bodyBasicMessage=env->Message();
+    		std::string message=bodyBasicMessage->Body();
+    		std::cout<<"message -> "<<message<<std::endl;
 		int count_of_msg = 100;
-		bool flag = channel->BasicConsumeMessage("SimpleSubscriber_", env, count_of_msg);
+		bool flag = connection->BasicConsumeMessage(count_of_msg);
 		if (flag == false){
 			std::cout <<"timeout"<<std::endl;
 			break;
 		}
-
-		msg = env->Message()->Body();
-
-		std::cout<<msg<<std::endl;
-		
 	}
 
 }
