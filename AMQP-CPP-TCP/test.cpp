@@ -15,7 +15,7 @@ int main()
 	// create an instance of your own tcp handler
 MyTcpHandler myHandler;
 
-// address of the server
+// address of the serv
 AMQP::Address address("amqp://guest:guest@localhost/vhost");
 
 // create a AMQP connection object
