@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblibC.a CMakeFiles/libC.dir/myConsumer.cpp.o
-/usr/bin/ranlib liblibC.a

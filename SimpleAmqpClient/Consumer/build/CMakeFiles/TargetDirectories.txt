@@ -1,3 +1,0 @@
-/Users/coderepublic1/Downloads/Nairi/MainProject/myProject/Consumer/build/CMakeFiles/libC.dir
-/Users/coderepublic1/Downloads/Nairi/MainProject/myProject/Consumer/build/CMakeFiles/edit_cache.dir
-/Users/coderepublic1/Downloads/Nairi/MainProject/myProject/Consumer/build/CMakeFiles/rebuild_cache.dir
