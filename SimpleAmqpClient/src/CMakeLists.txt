@@ -1,5 +1,5 @@
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_VERBOSE_MAKEFILE ON) #ON
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_VERBOSE_MAKEFILE ON) #ON
 
 LINK_DIRECTORIES(/usr/local/Cellar/boost/1.78.0_1/lib)
 INCLUDE_DIRECTORIES(/usr/local/Cellar/boost/1.78.0_1/include)
@@ -8,7 +8,7 @@ LINK_DIRECTORIES(/usr/local/Cellar/rabbitmq-c/0.11.0/lib)
 INCLUDE_DIRECTORIES(/usr/local/Cellar/rabbitmq-c/0.11.0/include)
 
 
-add_library( SAMQPC 
+ADD_LIBRARY( SAMQPC 
 
 SimpleAmqpClient.h
 
@@ -53,6 +53,6 @@ TableImpl.cpp)
 TARGET_LINK_LIBRARIES( SAMQPC LINK_PUBLIC ${boost_cstdint} )
 TARGET_LINK_LIBRARIES( SAMQPC LINK_PUBLIC ${amqp})
 
-target_link_libraries(SAMQPC PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")#/src
-#target_include_directories(Headers PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src ") 
+TARGET_LINK_LIBRARIES(SAMQPC PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+
 
