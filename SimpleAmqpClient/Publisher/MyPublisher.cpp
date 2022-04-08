@@ -18,7 +18,7 @@ Publisher::~Publisher()
 
 Publisher::ptr_t Publisher::Create(Channel::ptr_t channel,const std::string &publisher_name)
 {
-    return nullptr;//boost::make_shared<Publisher>(channel,boost::make_shared<std::string*>(&publisher_name));
+    return boost::make_shared<Publisher>(channel,boost::make_shared<std::string*>(&publisher_name));
 }
 
 void Publisher::publish(BasicMessage::ptr_t message)
