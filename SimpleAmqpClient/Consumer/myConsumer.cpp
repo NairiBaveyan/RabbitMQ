@@ -19,7 +19,7 @@ Consumer::~Consumer() = default;
 
 Consumer::ptr_t Consumer::Create(Channel::ptr_t channel,const std::string &publisher_name)
 {
-    return nullptr;//std::make_shared<Consumer>(channel,publisher_name);
+    return std::make_shared<Consumer>(channel,publisher_name);
 }
 
 std::string Consumer::waitForStrMsg(int time_out)
