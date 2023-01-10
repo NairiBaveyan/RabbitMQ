@@ -24,4 +24,5 @@ jobs:
         msbuild-architecture: x64
     - name: Build yosys_verific_rs
       run: |
-        cmake --build . --config Release
+        cmake -G Ninja -A x64 -S . -B "build64"
+        cmake --build build64 --config Release
